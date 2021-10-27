@@ -2,16 +2,19 @@ import json
 import os
 import shutil
 import uuid
-from dataclasses import dataclass
 from typing import List
 import hashlib
 
 
-@dataclass(frozen=True)
 class Column:
     name: str
     unique: bool
     type: str
+
+    def __init__(self, name, unique, type):
+        self.name = name
+        self.unique = unique
+        self.type = type
 
 
 class Table:
@@ -144,6 +147,3 @@ class Table:
                 csv += s
         with open("dump.csv", "w") as dump:
             dump.write(csv)
-
-
-
