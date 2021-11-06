@@ -3,7 +3,7 @@
 
  <q-splitter
       v-model="splitterModel"
-      style="height: 550px"
+      style="height: 650px"
     >
 
       <template v-slot:before>
@@ -62,7 +62,7 @@
                  <q-select :options="['name', 'age', 'number']" v-model="currentField" label="Select field"></q-select>
 <q-input v-model="criteria" label="Field value" v-if="currentField === 'name' || currentField === 'number'"></q-input>
       <q-input v-model="criteria" label="Field value" v-else type="number"></q-input>
-<q-btn @click="delete" label="Delete record"></q-btn>
+<q-btn @click="delete" label="Search record"></q-btn>
             </q-form>
            <q-table
       title="Records"
