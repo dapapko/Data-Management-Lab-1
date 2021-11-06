@@ -3,7 +3,7 @@
 
  <q-splitter
       v-model="splitterModel"
-      style="height: 250px"
+      style="height: 550px"
     >
 
       <template v-slot:before>
